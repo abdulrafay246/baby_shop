@@ -1,3 +1,4 @@
+import 'package:baby_shop/Colors/customcolors.dart';
 import 'package:baby_shop/views/auth/LoginScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,10 +28,10 @@ class _SplashScreenState extends State<SplashScreen> {
         children: [
           Center(
               child: Text("Baby Shop",
-                  style: GoogleFonts.inter(
-                      fontSize: Get.width * 0.2,
+                  style: GoogleFonts.oswald(
+                      fontSize: Get.width * 0.15,
                       fontWeight: FontWeight.w600,
-                      color: Colors.white))),
+                      color: CustomColors.purple))),
         ],
       ),
     );
