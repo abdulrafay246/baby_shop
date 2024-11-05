@@ -41,6 +41,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.18.0"
+<<<<<<< HEAD
   crypto:
     dependency: transitive
     description:
@@ -49,6 +50,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.6"
+=======
+>>>>>>> d2c037597a332c9b64ea4c72304e893ff88b3c78
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -91,6 +94,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
   get:
     dependency: "direct main"
     description:
@@ -130,6 +134,15 @@ packages:
       sha256: "3f87a60e8c63aecc975dda1ceedbc8f24de75f09e4856ea27daf8958f2f0ce05"
       url: "https://pub.dev"
     source: hosted
+=======
+  leak_tracker:
+    dependency: transitive
+    description:
+      name: leak_tracker
+      sha256: "3f87a60e8c63aecc975dda1ceedbc8f24de75f09e4856ea27daf8958f2f0ce05"
+      url: "https://pub.dev"
+    source: hosted
+>>>>>>> d2c037597a332c9b64ea4c72304e893ff88b3c78
     version: "10.0.5"
   leak_tracker_flutter_testing:
     dependency: transitive
@@ -187,6 +200,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.0"
+<<<<<<< HEAD
   path_provider:
     dependency: transitive
     description:
@@ -251,6 +265,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+=======
+>>>>>>> d2c037597a332c9b64ea4c72304e893ff88b3c78
   sky_engine:
     dependency: transitive
     description: flutter
@@ -304,6 +320,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.7.2"
+<<<<<<< HEAD
   typed_data:
     dependency: transitive
     description:
@@ -312,6 +329,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.4.0"
+=======
+>>>>>>> d2c037597a332c9b64ea4c72304e893ff88b3c78
   vector_math:
     dependency: transitive
     description:
@@ -328,6 +347,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "14.2.5"
+<<<<<<< HEAD
   web:
     dependency: transitive
     description:
@@ -347,3 +367,8 @@ packages:
 sdks:
   dart: ">=3.5.0 <4.0.0"
   flutter: ">=3.24.0"
+=======
+sdks:
+  dart: ">=3.3.0 <4.0.0"
+  flutter: ">=3.18.0-18.0.pre.54"
+>>>>>>> d2c037597a332c9b64ea4c72304e893ff88b3c78
