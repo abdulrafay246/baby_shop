@@ -1,3 +1,5 @@
+import 'package:baby_shop/views/auth/LoginScreen.dart';
+import 'package:baby_shop/views/auth/SignupScreen.dart';
 import 'package:baby_shop/views/auth/SplashScreen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +15,7 @@ void main() async {
     statusBarColor: Colors.transparent,
     statusBarIconBrightness: Brightness.light,
   ));
-  
+
   runApp(const MyApp());
 }
 
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       title: 'Flutter Demo',
-      home: SplashScreen(),
+      home: LoginScreen(),
     );
   }
 }

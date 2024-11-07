@@ -1,3 +1,4 @@
+import 'package:baby_shop/Colors/customcolors.dart';
 import 'package:baby_shop/widgets/Custombutton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,23 +18,24 @@ class LoginScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Text("Sign In"),
             TextField(
               cursorColor: Colors.grey,
-              style: TextStyle(fontSize: 18, color: Colors.grey),
+              style: TextStyle(fontSize: 18, color: CustomColors.textField),
               decoration: InputDecoration(
                   suffixIcon: Icon(
                     Icons.email,
-                    color: Colors.grey,
+                    color: CustomColors.textField,
                   ),
                   filled: true,
                   fillColor: const Color(0xf232323),
                   hintText: "Email.",
-                  hintStyle: TextStyle(color: Colors.grey),
+                  hintStyle: TextStyle(color: CustomColors.textField),
                   focusedBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.grey),
+                      borderSide: BorderSide(color: CustomColors.textField),
                       borderRadius: BorderRadius.circular(50)),
                   border: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.grey),
+                      borderSide: BorderSide(color: CustomColors.textField),
                       borderRadius: BorderRadius.circular(50))),
             ),
             const SizedBox(
@@ -43,14 +45,14 @@ class LoginScreen extends StatelessWidget {
               return TextField(
                 obscureText: controller.isObsecureText.value,
                 cursorColor: Colors.grey,
-                style: const TextStyle(fontSize: 18, color: Colors.grey),
+                style: TextStyle(fontSize: 18, color: CustomColors.textField),
                 decoration: InputDecoration(
                     suffixIcon: IconButton(
                       icon: Icon(
                           controller.isObsecureText.value
                               ? Icons.visibility
                               : Icons.visibility_off,
-                          color: Colors.grey),
+                          color: CustomColors.textField),
                       onPressed: () {
                         controller.isToggle();
                       },
@@ -58,20 +60,28 @@ class LoginScreen extends StatelessWidget {
                     filled: true,
                     fillColor: const Color(0xf232323),
                     hintText: "Password",
-                    hintStyle: const TextStyle(color: Colors.grey),
+                    hintStyle: TextStyle(color: CustomColors.textField),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: CustomColors.textField),
                         borderRadius: BorderRadius.circular(50)),
                     border: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: CustomColors.textField),
                         borderRadius: BorderRadius.circular(50))),
               );
             }),
-            CustomButton(
-                onTap: () {
-                  controller.Login();
+            SizedBox(height: Get.height * 0.05),
+            Obx(() {
+              return CustomButton(
+                borderRadius: 20,
+                elevation: 10,
+                backgroundColor: CustomColors.purple,
+                isLoading: controller.isLoading.value,
+                text: "Login",
+                onPressed: () {
+                  controller.login();
                 },
-                text: "Login")
+              );
+            })
           ],
         ),
       ),
