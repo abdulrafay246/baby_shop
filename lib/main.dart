@@ -1,6 +1,11 @@
+import 'package:baby_shop/views/auth/GetstartScreen.dart';
 import 'package:baby_shop/views/auth/LoginScreen.dart';
+import 'package:baby_shop/views/auth/OrdersummaryScreen.dart';
+import 'package:baby_shop/views/auth/PaymentmethodScreen.dart';
 import 'package:baby_shop/views/auth/SignupScreen.dart';
 import 'package:baby_shop/views/auth/SplashScreen.dart';
+import 'package:baby_shop/views/auth/productScreen.dart';
+import 'package:baby_shop/widgets/ProductCardScreen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -28,7 +33,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       title: 'Flutter Demo',
-      home: LoginScreen(),
+      debugShowCheckedModeBanner: false,
+      home: GetstartScreen(),
     );
   }
 }

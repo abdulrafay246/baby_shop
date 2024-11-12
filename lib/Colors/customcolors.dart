@@ -6,5 +6,4 @@ class CustomColors {
   static Color textlightgrey = Color(0xff555555);
   static Color black = Color(0x332B3A);
   static Color appBar = Color(0x000000);
-  
 }
