@@ -1,4 +1,5 @@
 import 'package:baby_shop/Colors/customcolors.dart';
+import 'package:baby_shop/images/imagepaths.dart';
 import 'package:baby_shop/widgets/Custombutton.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -37,12 +38,12 @@ class GetstartScreen extends StatelessWidget {
               ),
               Text(
                 "Explore the latest shoppig trends & curated\nstyle of fashion & lifestyle creations.",
-                style: GoogleFonts.inter(fontSize: 15),
+                style: Theme.of(context).textTheme.bodyLarge,
               ),
               SizedBox(
                 height: 20,
               ),
-              Image.asset("Assets/slideimage.jpg"),
+              Image.asset(ImagePath.childImage),
               SizedBox(height: 20),
               CustomButton(
                   text: "Get Start",
