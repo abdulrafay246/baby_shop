@@ -25,7 +25,7 @@ class Orderitemcard extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
-              child: Image.network(imageUrl,
+              child: Image.asset(imageUrl,
                   width: 80, height: 80, fit: BoxFit.cover),
             ),
             const SizedBox(width: 16),

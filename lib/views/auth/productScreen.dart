@@ -1,4 +1,5 @@
 import 'package:baby_shop/Colors/customcolors.dart';
+import 'package:baby_shop/images/imagepaths.dart';
 import 'package:baby_shop/widgets/ProductCardScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -90,10 +91,9 @@ class Productscreen extends StatelessWidget {
                       ),
                     ),
                     Image.network(
-                      'https://example.com/child-image.jpg',
+                      ImagePath.childImage28,
                       width: 100,
-                      height: 100,
-                      fit: BoxFit.cover,
+                      height: 190,
                     ),
                   ],
                 ),
@@ -125,18 +125,16 @@ class Productscreen extends StatelessWidget {
                 children: [
                   productcardscreen(
                     imageUrl:
-                        'https://via.placeholder.com/150', // Replace with your image URL
-                    discount: '50% off',
-                    productName: 'Pink winter jacket',
+                        ImagePath.childImage5, // Replace with your image URL
+                    productName: ' Frock',
                     availability: 'Multiple sizes available',
                     price: 674.25,
                     originalPrice: 899.00,
                   ),
                   productcardscreen(
                     imageUrl:
-                        'https://via.placeholder.com/150', // Replace with your image URL
-                    discount: '50% off',
-                    productName: 'blue winter jacket',
+                        ImagePath.childImage3, // Replace with your image URL
+                    productName: 'blue printed Frock',
                     availability: 'Multiple sizes available',
                     price: 329.00,
                     originalPrice: 899.00,

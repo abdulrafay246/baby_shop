@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 class productcardscreen extends StatelessWidget {
   final String imageUrl;
-  final String discount;
   final String productName;
   final String availability;
   final double price;
@@ -12,7 +11,6 @@ class productcardscreen extends StatelessWidget {
   const productcardscreen(
       {super.key,
       required this.imageUrl,
-      required this.discount,
       required this.productName,
       required this.availability,
       required this.price,
@@ -46,11 +44,6 @@ class productcardscreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: CustomColors.black,
                     borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Text(
-                    discount,
-                    style: GoogleFonts.inter(
-                        color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),

@@ -1,4 +1,5 @@
 import 'package:baby_shop/Colors/customcolors.dart';
+import 'package:baby_shop/images/imagepaths.dart';
 import 'package:baby_shop/widgets/Custombutton.dart';
 import 'package:baby_shop/widgets/OrderItemCard.dart';
 import 'package:flutter/material.dart';
@@ -82,16 +83,16 @@ class OrdersummaryScreen extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           Orderitemcard(
-            imageUrl: 'https://via.placeholder.com/80',
-            title: 'Pink winter jacket',
-            subtitle: 'Bright pink | 9M - 12M',
+            imageUrl: ImagePath.childImage19,
+            title: 'Brown winter jacket',
+            subtitle: 'Velvet Brown | 9M - 12M',
             price: '\$120.00',
             oldPrice: '\$220.00',
           ),
           Orderitemcard(
-            imageUrl: 'https://via.placeholder.com/80',
-            title: 'blue winter jacket',
-            subtitle: 'Bright pink | 9M - 12M',
+            imageUrl: ImagePath.childImage20,
+            title: 'Red Frock ',
+            subtitle: 'Lava Red | 9M - 12M',
             price: '\$329.00',
             oldPrice: '\$629.00',
           ),

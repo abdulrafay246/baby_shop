@@ -31,14 +31,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      theme: ThemeData(
-          textTheme:const TextTheme(
-              bodyLarge: TextStyle(fontFamily: "inter", fontSize: 15,color: Colors.black)),
-          scaffoldBackgroundColor: Colors.white),
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      home: GetstartScreen(),
-    );
+        theme: ThemeData(
+            textTheme: const TextTheme(
+                bodyLarge: TextStyle(
+                    fontFamily: "inter", fontSize: 15, color: Colors.black)),
+            scaffoldBackgroundColor: Colors.white),
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        home: Productscreen());
   }
 }
 
