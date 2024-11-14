@@ -1,4 +1,5 @@
 import 'package:baby_shop/Colors/customcolors.dart';
+import 'package:baby_shop/images/imagepaths.dart';
 import 'package:baby_shop/widgets/ProductCardScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,23 +10,8 @@ class Productscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
         backgroundColor: Colors.white,
-        title: Row(
-          children: [
-            const Icon(Icons.menu, color: Colors.black),
-            const SizedBox(width: 8.0),
-            DropdownButton(
-              items: [
-                DropdownMenuItem(child: Text("Liverce 5 yr")),
-              ],
-              onChanged: (value) {},
-              underline: Container(),
-              hint: Text("Shop for",
-                  style: GoogleFonts.inter(color: CustomColors.black)),
-            ),
-          ],
-        ),
+        title: const Icon(Icons.menu, color: Colors.black),
         actions: [
           const Icon(Icons.notifications_none, color: Colors.black),
           const SizedBox(width: 16.0),
@@ -57,43 +43,37 @@ class Productscreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Container(
-                padding: EdgeInsets.all(16.0),
+                padding: EdgeInsets.symmetric(horizontal: 16),
                 decoration: BoxDecoration(
-                  color: CustomColors.appBar,
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
+                    color: CustomColors.appBar,
+                    borderRadius: BorderRadius.circular(8.0),
+                    image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(ImagePath.product_bg))),
                 child: Row(
                   children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Get winter ready clothes for baby",
-                            style: GoogleFonts.inter(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Get winter ready\nclothes for baby",
+                          style: GoogleFonts.inter(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
                           ),
-                          SizedBox(height: 8.0),
-                          Text("We help you to grow your"),
-                          SizedBox(height: 8.0),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text(
-                              "Shop now",
-                              style:
-                                  GoogleFonts.inter(color: CustomColors.purple),
-                            ),
+                        ),
+                        SizedBox(height: 8.0),
+                        Text("We help you to grow your"),
+                        SizedBox(height: 8.0),
+                        ElevatedButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Shop now",
+                            style:
+                                GoogleFonts.inter(color: CustomColors.purple),
                           ),
-                        ],
-                      ),
-                    ),
-                    Image.network(
-                      'https://example.com/child-image.jpg',
-                      width: 100,
-                      height: 100,
-                      fit: BoxFit.cover,
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -125,7 +105,7 @@ class Productscreen extends StatelessWidget {
                 children: [
                   productcardscreen(
                     imageUrl:
-                        'https://via.placeholder.com/150', // Replace with your image URL
+                        ImagePath.pink_jacket, // Replace with your image URL
                     discount: '50% off',
                     productName: 'Pink winter jacket',
                     availability: 'Multiple sizes available',
@@ -134,7 +114,7 @@ class Productscreen extends StatelessWidget {
                   ),
                   productcardscreen(
                     imageUrl:
-                        'https://via.placeholder.com/150', // Replace with your image URL
+                        ImagePath.blue_jacket, // Replace with your image URL
                     discount: '50% off',
                     productName: 'blue winter jacket',
                     availability: 'Multiple sizes available',

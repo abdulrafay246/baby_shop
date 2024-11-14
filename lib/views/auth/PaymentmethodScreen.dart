@@ -14,11 +14,9 @@ class PaymentmethodScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.of(context).pop(),
+          onPressed: () {},
         ),
         title: Text(
           'Select a payment method',
@@ -44,14 +42,8 @@ class PaymentmethodScreen extends StatelessWidget {
             ),
             Cardinputfields(),
             const SizedBox(height: 20),
-            Text(
-              'More ways to pay',
-              style:
-                  GoogleFonts.inter(fontSize: 18, fontWeight: FontWeight.w500),
-            ),
-            const SizedBox(height: 20),
-            Billdetailssection(),
-            const SizedBox(height: 20),
+            // Billdetailssection(),
+            // const SizedBox(height: 20),
             CustomButton(
                 text: "Make Payment",
                 backgroundColor: CustomColors.purple,

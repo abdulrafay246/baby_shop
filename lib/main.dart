@@ -6,6 +6,7 @@ import 'package:baby_shop/views/auth/SignupScreen.dart';
 import 'package:baby_shop/views/auth/SplashScreen.dart';
 import 'package:baby_shop/views/auth/productScreen.dart';
 import 'package:baby_shop/widgets/ProductCardScreen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -32,12 +33,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       theme: ThemeData(
-          textTheme:const TextTheme(
-              bodyLarge: TextStyle(fontFamily: "inter", fontSize: 15,color: Colors.black)),
+          textTheme: const TextTheme(
+              bodyLarge: TextStyle(
+                  fontFamily: "inter", fontSize: 15, color: Colors.black)),
           scaffoldBackgroundColor: Colors.white),
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: GetstartScreen(),
+      home: SplashScreen(),
     );
   }
 }

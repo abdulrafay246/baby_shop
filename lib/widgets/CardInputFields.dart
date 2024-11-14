@@ -6,43 +6,54 @@ class Cardinputfields extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
-        TextField(
-          decoration: InputDecoration(
-            labelText: 'Card number',
-            hintText: '1234 - 5678 - 9012 - 3456',
-            border: OutlineInputBorder(),
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Card number",
+            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
           ),
-          keyboardType: TextInputType.number,
-        ),
-        const SizedBox(height: 10),
-        Row(
-          children: [
-            Expanded(
-              child: TextField(
-                decoration: InputDecoration(
-                  labelText: 'Expires',
-                  hintText: 'MM/YY',
-                  border: OutlineInputBorder(),
-                ),
-                keyboardType: TextInputType.datetime,
-              ),
+          SizedBox(
+            height: 6,
+          ),
+          TextField(
+            decoration: InputDecoration(
+              hintText: '1234 - 5678 - 9012 - 3456',
+              border: OutlineInputBorder(),
             ),
-            const SizedBox(width: 10),
-            Expanded(
-              child: TextField(
-                decoration: InputDecoration(
-                  labelText: 'CVV',
-                  hintText: '123',
-                  border: OutlineInputBorder(),
-                ),
-                keyboardType: TextInputType.number,
-                obscureText: true,
-              ),
+            keyboardType: TextInputType.number,
+          ),
+          const SizedBox(height: 15),
+          Text(
+            "Expires",
+            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+          ),
+          SizedBox(
+            height: 6,
+          ),
+          TextField(
+            decoration: InputDecoration(
+              hintText: 'MM/YY',
+              border: OutlineInputBorder(),
             ),
-          ],
-        ),
-      ],
-    );
+            keyboardType: TextInputType.number,
+          ),
+          const SizedBox(height: 15),
+          Text(
+            "CVV",
+            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+          ),
+          SizedBox(
+            height: 6,
+          ),
+          TextField(
+            decoration: InputDecoration(
+              hintText: '123',
+              border: OutlineInputBorder(),
+            ),
+            keyboardType: TextInputType.number,
+          ),
+          const SizedBox(height: 15),
+        ]);
   }
 }

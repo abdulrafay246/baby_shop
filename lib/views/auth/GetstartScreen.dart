@@ -1,7 +1,9 @@
 import 'package:baby_shop/Colors/customcolors.dart';
 import 'package:baby_shop/images/imagepaths.dart';
+import 'package:baby_shop/views/auth/LoginScreen.dart';
 import 'package:baby_shop/widgets/Custombutton.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GetstartScreen extends StatelessWidget {
@@ -12,10 +14,12 @@ class GetstartScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.to(() => const LoginScreen());
+          },
           child: Text('Skip',
               style: GoogleFonts.inter(
-                  color: Colors.purple,
+                  color: CustomColors.purple,
                   fontSize: 12,
                   fontWeight: FontWeight.w400)),
         ),
@@ -43,7 +47,7 @@ class GetstartScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Image.asset(ImagePath.childImage1),
+              Image.asset(ImagePath.slideimg),
               SizedBox(height: 20),
               CustomButton(
                   text: "Get Start",

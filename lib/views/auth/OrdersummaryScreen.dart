@@ -1,4 +1,5 @@
 import 'package:baby_shop/Colors/customcolors.dart';
+import 'package:baby_shop/images/imagepaths.dart';
 import 'package:baby_shop/widgets/Custombutton.dart';
 import 'package:baby_shop/widgets/OrderItemCard.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class OrdersummaryScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           // Address Section
           Row(
@@ -56,11 +57,10 @@ class OrdersummaryScreen extends StatelessWidget {
 
           const SizedBox(height: 16),
           // Add Address and Delivery Instructions
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.purple[50],
-              foregroundColor: Colors.purple,
+          OutlinedButton(
+            style: OutlinedButton.styleFrom(
               minimumSize: const Size.fromHeight(50),
+              side: BorderSide(color: CustomColors.purple),
             ),
             onPressed: () {},
             child: const Text('Add a new address'),
@@ -69,7 +69,7 @@ class OrdersummaryScreen extends StatelessWidget {
           OutlinedButton(
             style: OutlinedButton.styleFrom(
               minimumSize: const Size.fromHeight(50),
-              side: BorderSide(color: Colors.purple.shade100),
+              side: BorderSide(color: CustomColors.purple),
             ),
             onPressed: () {},
             child: const Text('Add delivery instructions'),
@@ -82,14 +82,14 @@ class OrdersummaryScreen extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           Orderitemcard(
-            imageUrl: 'https://via.placeholder.com/80',
+            imageUrl: ImagePath.pink_jacket,
             title: 'Pink winter jacket',
             subtitle: 'Bright pink | 9M - 12M',
             price: '\$120.00',
             oldPrice: '\$220.00',
           ),
           Orderitemcard(
-            imageUrl: 'https://via.placeholder.com/80',
+            imageUrl: ImagePath.blue_jacket,
             title: 'blue winter jacket',
             subtitle: 'Bright pink | 9M - 12M',
             price: '\$329.00',
