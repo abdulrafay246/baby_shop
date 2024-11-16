@@ -31,7 +31,7 @@ class productcardscreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 child: Image.network(
                   imageUrl,
-                  width: 150,
+                  width: 180,
                   height: 150,
                   fit: BoxFit.cover,
                 ),

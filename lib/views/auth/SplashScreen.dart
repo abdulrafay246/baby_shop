@@ -1,4 +1,5 @@
 import 'package:baby_shop/Colors/customcolors.dart';
+import 'package:baby_shop/views/auth/GetstartScreen.dart';
 import 'package:baby_shop/views/auth/LoginScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,7 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3), () => Get.to(() => const LoginScreen()));
+    Timer(
+        const Duration(seconds: 3), () => Get.to(() => const GetstartScreen()));
   }
 
   Widget build(BuildContext context) {

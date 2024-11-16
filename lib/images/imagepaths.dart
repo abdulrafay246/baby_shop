@@ -26,6 +26,4 @@ class ImagePath {
   static String childImage24 = "assets/images/s6.jpeg";
   static String childImage25 = "assets/images/s7.jpeg";
   static String childImage26 = "assets/images/frock8.jpeg";
-  static String childImage27 = "assets/images/A.jpg";
-  static String childImage28 = "assets/images/1.png";
 }

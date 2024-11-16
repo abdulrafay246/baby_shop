@@ -22,7 +22,7 @@ class OrdersummaryScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           // Address Section
           Row(
@@ -57,11 +57,10 @@ class OrdersummaryScreen extends StatelessWidget {
 
           const SizedBox(height: 16),
           // Add Address and Delivery Instructions
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.purple[50],
-              foregroundColor: Colors.purple,
+          OutlinedButton(
+            style: OutlinedButton.styleFrom(
               minimumSize: const Size.fromHeight(50),
+              side: BorderSide(color: CustomColors.purple),
             ),
             onPressed: () {},
             child: const Text('Add a new address'),
@@ -70,7 +69,7 @@ class OrdersummaryScreen extends StatelessWidget {
           OutlinedButton(
             style: OutlinedButton.styleFrom(
               minimumSize: const Size.fromHeight(50),
-              side: BorderSide(color: Colors.purple.shade100),
+              side: BorderSide(color: CustomColors.purple),
             ),
             onPressed: () {},
             child: const Text('Add delivery instructions'),
@@ -83,16 +82,16 @@ class OrdersummaryScreen extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           Orderitemcard(
-            imageUrl: ImagePath.childImage19,
-            title: 'Brown winter jacket',
-            subtitle: 'Velvet Brown | 9M - 12M',
+            imageUrl: 'https://via.placeholder.com/80',
+            title: 'Pink winter jacket',
+            subtitle: 'Bright pink | 9M - 12M',
             price: '\$120.00',
             oldPrice: '\$220.00',
           ),
           Orderitemcard(
-            imageUrl: ImagePath.childImage20,
-            title: 'Red Frock ',
-            subtitle: 'Lava Red | 9M - 12M',
+            imageUrl: 'https://via.placeholder.com/80',
+            title: 'blue winter jacket',
+            subtitle: 'Bright pink | 9M - 12M',
             price: '\$329.00',
             oldPrice: '\$629.00',
           ),
