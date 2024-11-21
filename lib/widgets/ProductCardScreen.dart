@@ -8,13 +8,15 @@ class productcardscreen extends StatelessWidget {
   final String availability;
   final double price;
   final double originalPrice;
-  const productcardscreen(
-      {super.key,
-      required this.imageUrl,
-      required this.productName,
-      required this.availability,
-      required this.price,
-      required this.originalPrice});
+
+  const productcardscreen({
+    super.key,
+    required this.imageUrl,
+    required this.productName,
+    required this.availability,
+    required this.price,
+    required this.originalPrice,
+  });
 
   @override
   Widget build(BuildContext context) {

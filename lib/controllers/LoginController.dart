@@ -30,7 +30,7 @@ class Logincontroller extends GetxController {
         Get.snackbar("Successful", "User Login Successfull");
         Get.to(() => const SignupScreen());
       }).onError((error, stractrance) {
-        isLoading.value = true;
+        isLoading.value = false;
         Get.snackbar("error", "Something Went wrong");
         log(error.toString());
       });

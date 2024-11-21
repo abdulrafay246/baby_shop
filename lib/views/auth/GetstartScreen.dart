@@ -47,7 +47,11 @@ class GetstartScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Image.asset(ImagePath.childImage1),
+              Image.asset(
+                ImagePath.childImage9,
+                width: 250,
+                height: 250,
+              ),
               SizedBox(height: 20),
               CustomButton(
                   text: "Get Start",

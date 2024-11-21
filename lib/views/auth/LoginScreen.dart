@@ -1,8 +1,9 @@
 import 'package:baby_shop/Colors/customcolors.dart';
+import 'package:baby_shop/controllers/LoginController.dart';
+import 'package:baby_shop/views/auth/SignupScreen.dart';
 import 'package:baby_shop/widgets/Custombutton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../controllers/LoginController.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -18,7 +19,16 @@ class LoginScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("Sign In"),
+            Text(
+              "Sign In",
+              style: TextStyle(
+                  fontSize: 50,
+                  fontWeight: FontWeight.w500,
+                  color: CustomColors.purple),
+            ),
+            SizedBox(
+              height: 20,
+            ),
             TextField(
               cursorColor: Colors.grey,
               style: TextStyle(fontSize: 18, color: CustomColors.textField),
@@ -79,6 +89,7 @@ class LoginScreen extends StatelessWidget {
                 text: "Login",
                 onPressed: () {
                   controller.login();
+                  Get.to(() => const SignupScreen());
                 },
               );
             })

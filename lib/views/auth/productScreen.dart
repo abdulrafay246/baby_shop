@@ -1,7 +1,9 @@
 import 'package:baby_shop/Colors/customcolors.dart';
 import 'package:baby_shop/images/imagepaths.dart';
+import 'package:baby_shop/views/auth/singleproduct.dart';
 import 'package:baby_shop/widgets/ProductCardScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Productscreen extends StatelessWidget {
@@ -44,12 +46,12 @@ class Productscreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16),
-                decoration: BoxDecoration(
-                    color: CustomColors.appBar,
-                    borderRadius: BorderRadius.circular(8.0),
-                    image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: AssetImage(ImagePath.childImage21))),
+                // decoration: BoxDecoration(
+                //     color: CustomColors.appBar,
+                //     borderRadius: BorderRadius.circular(8.0),
+                //     image: DecorationImage(
+                //         fit: BoxFit.cover,
+                //         image: AssetImage(ImagePath.childImage27))),
                 child: Row(
                   children: [
                     Expanded(
@@ -78,9 +80,9 @@ class Productscreen extends StatelessWidget {
                       ),
                     ),
                     Image.network(
-                      'https://example.com/child-image.jpg',
+                      ImagePath.childImage27,
                       width: 100,
-                      height: 100,
+                      height: 150,
                       fit: BoxFit.cover,
                     ),
                   ],
@@ -113,7 +115,7 @@ class Productscreen extends StatelessWidget {
                 children: [
                   productcardscreen(
                     imageUrl:
-                        'https://via.placeholder.com/150', // Replace with your image URL
+                        ImagePath.childImage17, // Replace with your image URL
                     productName: 'Pink winter jacket',
                     availability: 'Multiple sizes available',
                     price: 674.25,
@@ -121,7 +123,7 @@ class Productscreen extends StatelessWidget {
                   ),
                   productcardscreen(
                     imageUrl:
-                        'https://via.placeholder.com/150', // Replace with your image URL
+                        ImagePath.childImage18, // Replace with your image URL
                     productName: 'blue winter jacket',
                     availability: 'Multiple sizes available',
                     price: 329.00,
